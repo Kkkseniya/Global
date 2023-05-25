@@ -1,0 +1,239 @@
+.header
+  padding: 30px 0
+  &__logo
+    display: inline-block
+    width: 131px
+    height: 40px
+    & img
+      width: 100%
+      height: 100%
+  &__menu
+    padding: 0
+    margin: 0
+    list-style-type: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+    & li
+      position: relative
+      cursor: pointer
+      &:not(:last-child)
+        margin-right: 48px
+      &:hover::after
+        content: ""
+        position: absolute
+        bottom: -4px
+        left: 50%
+        transform: translateX(-50%)
+        height: 0px
+        width: 21px
+        border: 1.5px solid #FB9B69
+    & a
+      font-style: normal
+      font-weight: 400
+      font-size: 16px
+      line-height: 24px
+      color: #4A4A4A
+      text-decoration: none
+  &__btn
+    padding: 9px 23px
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+.info-wrapper
+  display: grid
+  grid-template-columns: 52% 48%
+.info
+  padding-top: 23px
+  &__title
+    font-style: normal
+    font-weight: 700
+    font-size: 48px
+    line-height: 72px
+    color: $black-color
+    max-width: 474px
+    margin-bottom: 22px
+    margin-top: 64px
+    &>span
+      color: $orange-color
+  &__description
+    max-width: 444px
+    max-height: 106px
+    overflow-y: scroll
+    font-style: normal
+    font-weight: 500
+    font-size: 15px
+    line-height: 26px
+    color: $grey-color
+    margin-bottom: 30px
+  &__btn
+    text-align: center
+    padding: 12px 10px
+    max-width: 128px
+    margin-bottom: 50px
+  &__form
+    position: relative
+    width: 597px
+    margin-bottom: 40px
+  &__users
+    display: flex
+    align-items: center
+    justify-content: start
+    margin-bottom: 44px
+.form-input
+  width: 100%
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  letter-spacing: 0.01em
+  padding: 22px 95px 22px 40px
+  background-color: #fff
+  box-shadow: 0px 20px 30px rgba(222, 222, 222, 0.25)
+  border-radius: 100px
+  border: none
+  outline: none
+  &::placeholder
+    color: #A1A1A1
+  &:not(:focus) + .cursor-search::before
+    display: inline-block
+    animation: cursor-blinking 1200ms infinite step-end
+.cursor-search
+  &::before
+    content: ''
+    display: none
+    position: absolute
+    left: 37px
+    top: 50%
+    transform: translateY(-50%)
+    height: 18px
+    border: 1.5px solid #838383
+    opacity: 1
+.button-search
+  position: absolute
+  top: 4px
+  right: 6px
+  width: 55px
+  height: 55px
+  background-color: $green-color
+  border-radius: 50%
+  border: none
+  cursor: pointer
+  & img
+    width: 26px
+    height: 26px
+.users-container
+  width: 102px
+  height: 38px
+  position: relative
+  &__avatar
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    height: 38px
+    width: 38px
+    border-radius: 50%
+    border: none
+    & img
+      width: 100%
+      height: 100%
+    &:nth-child(1)
+      z-index: 4
+    &:nth-child(2)
+      left: 22px
+      z-index: 3
+    &:nth-child(3)
+      left: 44px
+      z-index: 2
+    &:nth-child(4)
+      left: 66px
+      z-index: 1
+.users-text
+  margin-left: 12px
+  color: #707070
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 19px
+  & span
+    color: #FD905A
+.image-block
+  position: relative
+  overflow: hidden
+  &__circle
+    height: 450px
+    width: 450px
+    border: 2px solid #E8E8E8
+    border-radius: 50%
+    position: relative
+    top: 15%
+    left: 10%
+    z-index: 0
+    animation: spin 14s linear infinite
+    animation-delay: 6s
+  &__photo
+    position: absolute
+    bottom: 0
+    right: -26%
+    z-index: 2
+  &__flag
+    position: absolute
+    top: 50%
+    right: 30%
+    transform: translateY(-50%)
+    z-index: 1
+    &:nth-child(1)
+      animation: appearance-1 1.5s ease-out
+      animation-fill-mode: forwards
+      animation-delay: 3s
+    &:nth-child(2)
+      animation: appearance-2 1.5s ease-out
+      animation-fill-mode: forwards
+      animation-delay: 3.4s
+    &:nth-child(3)
+      animation: appearance-3 1.5s ease-out
+      animation-fill-mode: forwards
+      animation-delay: 3.8s
+    &:nth-child(4)
+      animation: appearance-4 1.5s ease-out
+      animation-fill-mode: forwards
+      animation-delay: 4.2s
+    &:nth-child(5)
+      animation: appearance-5 1.5s ease-out
+      animation-fill-mode: forwards
+      animation-delay: 4.6s
+
+@keyframes cursor-blinking
+  50%
+    border: transparent
+@keyframes appearance-1
+  0%
+    top: 50%
+    left: 30%
+  100%
+    left: -12%
+    top: 50%
+@keyframes appearance-2
+  100%
+    top: 20%
+    left: -4%
+@keyframes appearance-3
+  100%
+    top: 2%
+    right: 30%
+@keyframes appearance-4
+  100%
+    top: 20%
+    right: -4%
+@keyframes appearance-5
+  100%
+    right: -12%
+    top: 50%
+@keyframes spin
+  100%
+    transform: rotate(1turn)
+@keyframes spin-reverse
+  from
+    transform: rotate(1turn)
