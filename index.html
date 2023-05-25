@@ -14,20 +14,37 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
+  <header class="header header--fixed">
+    <div class="container header-container">
       <div class="header__wrapper">
         <a href="#" class="header__logo">
           <img src="./img/logo.svg" alt="Logo image">
         </a>
-        <ul class="header__menu">
+        <ul class="header__menu menu-desktop">
           <li><a href="#">Mobile Top Up</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Rate</a></li>
           <li><a href="#">Help</a></li>
         </ul>
-        <button class="header__btn button">Sign Up</button>
+
+        <div class="button-wrapper">
+          <button class="header__btn button">Sign Up</button>
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="header-mobile">
+      <ul class="header__menu">
+        <li><a href="#">Mobile Top Up</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Rate</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
     </div>
   </header>
 
@@ -60,6 +77,8 @@
 
       <div class="info__image image-block">
         <img class="image-block__photo" src="./img/woman.png" alt="Photo of woman">
+        <img class="image-block__static-photo" src="./img/woman-static.png" alt="Photo of woman">
+
         <div class="image-block__circle">
           <img class="image-block__flag" src="./img/flag-india-small.svg" alt="Flag of India">
           <img class="image-block__flag" src="./img/flag-england.svg" alt="Flag of England">

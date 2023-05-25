@@ -1,0 +1,185 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 90%
+  .header
+    &__menu
+      & a
+        font-size: 14px
+  .button
+    font-size: 14px
+  .info
+    &__title
+      font-size: 42px
+      line-height: 66px
+      max-width: 426px
+      margin-top: 45px
+    &__description
+      max-width: 382px
+    &__form
+      width: 100%
+  .users-text
+    font-size: 14px
+  .form-input
+    padding: 18px 93px 18px 35px
+    font-size: 14px
+  .button-search
+    top: 1px
+    width: 52px
+    height: 52px
+  .cursor-search::before
+    left: 32px
+    height: 16px
+  .info-wrapper
+    grid-template-columns: 50% 50%
+  .image-block
+    &__photo
+      height: 70%
+      width: auto
+    &__circle
+      height: 380px
+      width: 380px
+      top: 20%
+@media (max-width: 992px)
+  .info-wrapper
+    grid-template-columns: 1fr
+  .info
+    &__title
+      max-width: 100%
+      margin: auto
+      text-align: center
+    &__description
+      margin-top: 26px
+      max-width: 100%
+    &__btn
+      margin: 0 auto 50px
+    &__users
+      margin-bottom: 0
+  .image-block
+    height: 500px
+    padding-top: 20px
+    &__photo
+      width: 90%
+      height: auto
+    &__circle
+      height: 360px
+      width: 360px
+      top: 6%
+@media (max-width: 768px)
+  .info
+    padding-top: 123px
+    &__title
+      font-size: 36px
+      line-height: 56px
+  .menu-desktop
+    display: none
+  .burger-menu
+    display: flex
+  .header--fixed
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 99
+  .image-block
+    height: 412px
+    &__circle
+      height: 280px
+      width: 280px
+    &__flag
+      width: 30%
+      height: auto
+@media (max-width: 576px)
+  .burger-menu
+    margin-left: 40px
+  .info
+    &__title
+      font-size: 32px
+      line-height: 48px
+    &__description
+      font-size: 14px
+      margin: 22px 0
+    &__btn
+      margin-bottom: 40px
+  .button-search img
+    width: 24px
+    height: 24px
+  .image-block
+    &__flag:nth-child(n), &__circle
+      animation: none
+    &__photo, &__circle
+      display: none
+    &__static-photo
+      display: inline
+@media (max-width: 480px)
+  .header
+    padding-top: 20px
+    &__logo
+      width: 116px
+      height: auto
+    &__btn
+      padding: 9px 18px
+  .header-container
+    padding-bottom: 20px
+  .header-mobile
+    top: 79px
+  .burger-menu
+    margin-left: 18px
+  .info
+    padding-top: 79px
+    &__title
+      font-size: 28px
+      line-height: 44px
+    &__description
+      text-align: center
+    &__users
+      flex-direction: column
+      align-items: start
+  .users-text
+    margin-left: 0
+    margin-top: 5px
+  .form-input
+    padding: 14px 75px 14px 25px
+    font-size: 12px
+  .cursor-search::before
+    left: 22px
+    height: 14px
+  .button-search
+    width: 44px
+    height: 44px
+  .users-text
+    font-size: 12px
+  .image-block
+    padding-top: 10px
+    height: 380px
+@media (max-width: 320px)
+  .container
+    max-width: 94%
+  .header-mobile
+    top: 71px
+  .header__logo
+    width: 85px
+  .button
+    font-size: 12px
+  .burger-menu
+    margin-left: 10px
+    width: 22px
+  .info
+    &__title
+      font-size: 22px
+      line-height: 36px
+    &__description
+      font-size: 12px
+      line-height: 22px
+  .form-input
+    padding-left: 14px
+    padding-right: 60px
+    font-size: 11px
+  .cursor-search::before
+    left: 12px
+  .button-search
+    right: 4px
+    & img
+      width: 20px
+      height: 20px
+  .image-block
+    height: 300px

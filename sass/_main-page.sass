@@ -1,5 +1,6 @@
 .header
-  padding: 30px 0
+  background-color: #ECF7F3
+  padding: 30px 0 0
   &__logo
     display: inline-block
     width: 131px
@@ -41,6 +42,25 @@
     display: flex
     align-items: center
     justify-content: space-between
+.header-container
+  padding-bottom: 30px
+.burger-menu
+  display: none
+  align-items: center
+  justify-content: space-between
+  flex-direction: column
+  border: none
+  background-color: transparent
+  width: 26px
+  height: 14px
+  padding: 0
+  margin-left: 60px
+  & span
+    width: 100%
+    border-bottom: 3px solid $black-color
+.button-wrapper
+  display: flex
+  align-items: center
 .info-wrapper
   display: grid
   grid-template-columns: 52% 48%
@@ -160,8 +180,13 @@
   & span
     color: #FD905A
 .image-block
+  display: flex
+  justify-content: center
   position: relative
   overflow: hidden
+  &__static-photo
+    display: none
+    object-fit: cover
   &__circle
     height: 450px
     width: 450px
@@ -169,14 +194,12 @@
     border-radius: 50%
     position: relative
     top: 15%
-    left: 10%
     z-index: 0
     animation: spin 14s linear infinite
     animation-delay: 6s
   &__photo
     position: absolute
     bottom: 0
-    right: -26%
     z-index: 2
   &__flag
     position: absolute
@@ -204,6 +227,24 @@
       animation: appearance-5 1.5s ease-out
       animation-fill-mode: forwards
       animation-delay: 4.6s
+.header-mobile
+  display: none
+  background-color: $green-color
+  padding-top: 30px
+  overflow: scroll
+  position: fixed
+  top: 100px
+  left: 0
+  right: 0
+  bottom: 0
+  & > .header__menu
+    flex-direction: column
+    & li
+      margin: 0 0 20px
+    & a
+      color: #fff
+.header-mobile--visible
+  display: block
 
 @keyframes cursor-blinking
   50%
